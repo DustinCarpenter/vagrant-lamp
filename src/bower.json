@@ -1,0 +1,40 @@
+{
+  "name": "vagrant-src",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Dustin Carpenter <dustin@wayspring.net>"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "datatables-bootstrap3-plugin": "~0.4.0",
+    "bootstrap-daterangepicker": "~2.1.13",
+    "bootstrap-datetimepicker": "~0.0.11"
+  },
+  "dev-dependencies": {
+    "grunt": "~0.4.5",
+    "grunt-cli": "~0.1.13"
+  },
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "dist/js/bootstrap.js",
+        "dist/css/bootstrap.css",
+        "less/bootstrap.less"
+      ]
+    }
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor"
+  ],
+  "resolutions": {
+    "bootstrap": "~3.3.5"
+  }
+}

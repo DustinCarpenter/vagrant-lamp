@@ -1,0 +1,12 @@
+{
+    "name": "dustin/src",
+    "require": {
+        "codeigniter/framework": "^3.0"
+    },
+    "authors": [
+        {
+            "name": "DustinCarpenter",
+            "email": "dustin@wayspring.net"
+        }
+    ]
+}
