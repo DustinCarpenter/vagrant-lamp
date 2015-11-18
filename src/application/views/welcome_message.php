@@ -41,9 +41,9 @@
 
 	<div class="jumbotron">
 		<div class="container">
-			<h1>Hello, world!</h1>
-			<p>This is a template for a setting up a vargran box ready for app development.</p>
-			<p><a class="btn btn-primary btn-lg" href="#" role="button">Button text &raquo;</a></p>
+			<h1>Hello World!</h1>
+			<p>This is a template for a setting up a vargrant box ready for app development using codeigniter, bootstrap, and other goodies.</p>
+			<p><a class="btn btn-primary btn-lg" href="https://github.com/DustinCarpenter/vagrant-lamp" role="button">Instructions &raquo;</a></p>
 		</div>
 	</div>
 

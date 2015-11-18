@@ -6,8 +6,8 @@ module.exports = function (grunt) {
       app: {
         src: 'application/views/welcome_message.php',
         exclude: [
-            'datatables-bootstrap3.css',
-            'datatables-bootstrap3.js'
+            'datatables-bootstrap3.min.css',
+            'datatables-bootstrap3.min.js'
         ],
       }
     }
