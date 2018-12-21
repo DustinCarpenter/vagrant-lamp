@@ -1,7 +1,7 @@
 {
     "name": "dustin/src",
     "require": {
-        "codeigniter/framework": "^3.0"
+        "codeigniter/framework": "~3"
     },
     "authors": [
         {
