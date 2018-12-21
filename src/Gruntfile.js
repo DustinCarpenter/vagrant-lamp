@@ -4,11 +4,7 @@ module.exports = function (grunt) {
   grunt.initConfig({
     wiredep: {
       app: {
-        src: 'application/views/welcome_message.php',
-        exclude: [
-            'datatables-bootstrap3.min.css',
-            'datatables-bootstrap3.min.js'
-        ],
+        src: 'application/views/welcome_message.php'
       }
     }
   });
