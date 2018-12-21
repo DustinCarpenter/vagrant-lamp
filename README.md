@@ -27,14 +27,9 @@ Inspired by, and derived from: <https://github.com/mattandersen/vagrant-lamp>
 * Grunt.js
 * Grunt wiredep
 * Git
-* jQuery 2.0.3
-* Twitter Bootstrap 3.3.5
-* Bootstrap DateRangePicker
-* Bootstrap DateTimePicker
-* Datatables 1.10.10 (with bootstrap3-plugin)
-* FontAwesome
-* Moment.js
-* CodeIgniter 3.0.3
+* jQuery 3.x.x
+* Twitter Bootstrap 3.x.x
+* CodeIgniter 3.x.x
 
 ### Startup
 At first boot up, the `package.json`, `bower.json` and `composer.json` files will be installed and placed in their package folders. A new git repo is created inside the **src** folder containing a `.gitignore` file to ignore these and other common files.
