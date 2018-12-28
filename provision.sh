@@ -61,13 +61,13 @@ apache_go() {
 	cat << EOF > ${apache_vhost_file}
 <VirtualHost *:80>
         ServerAdmin webmaster@localhost
-        DocumentRoot /vagrant/src
+        DocumentRoot /vagrant/public_html
         LogLevel debug
 
         ErrorLog /var/log/apache2/error.log
         CustomLog /var/log/apache2/access.log combined
 
-        <Directory /vagrant/src>
+        <Directory /vagrant/public_html>
             AllowOverride All
             Require all granted
         </Directory>
@@ -117,38 +117,26 @@ mysql_go() {
 
 setup_app() {
 	echo ">>>>>> Starting Setup..."
-	cd /vagrant/src
+	cd /vagrant/public_html
 
 	echo ">>>>>> Installing NPM..."
-	curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
+	curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
 
 	echo ">>>>>> Installing Node..."
-	sudo apt-get install -y nodejs
-
-	echo ">>>>>> Loading package.json..."
-	sudo npm install
-
-	echo ">>>>>> Installing Bower..."
-	sudo npm install -g bower
-
-	echo ">>>>>> Loading bower.json..."
-	sudo bower install --allow-root
+	sudo apt-get install nodejs
 
 	echo ">>>>>> Installing Composer..."
 	curl -sS https://getcomposer.org/installer | php
 	sudo mv composer.phar /usr/local/bin/composer
 
-	echo ">>>>>> Loading composer.json..."
-	sudo composer install
-
-	echo ">>>>>> Installing Grunt..."
-	sudo npm install -g grunt-cli
-
-	echo ">>>>>> Running grunt wiredep..."
-	grunt wiredep
-
+	echo ">>>>>> Installing Codeigniter..."
+	cd /vagrant
+	composer require codeigniter/framework
+	
 	echo ">>>>>> Creating new git Repo..."
+	cd /vagrant/public_html
 	git init
+
 }
 
 main
