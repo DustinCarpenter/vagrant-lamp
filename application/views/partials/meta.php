@@ -1,1 +1,1 @@
-<title>Home</title>
+<title><?php echo $page_title ?></title>

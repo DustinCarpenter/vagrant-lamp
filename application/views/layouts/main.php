@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 	<link rel="stylesheet" href="/css/style.css">
+	<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgo=">
 	<?php $this->load->view('partials/meta') ?>
 </head>
 
@@ -17,12 +18,7 @@
 
 	<main class="flex-shrink-0">
 		<div class="container">
-			<h1 class="mt-5">Hello World!</h1>
-			<p class="lead"><i class="fas fa-laptop-code"></i> This is a template for a setting up a vargrant box ready for app development using CodeIgniter 3.x and Bootstrap 4.2.1</p>
-			<div>
-				<a class="btn btn-info" href="/info.php" role="button"> <i class="fas fa-info-circle"></i> View phpinfo() Page</a>
-				<a class="btn btn-primary" href="https://github.com/DustinCarpenter/vagrant-lamp" role="button"><i class="fab fa-github"></i> View Project On GitHub</a>
-			</div>
+            <?php $this->load->view($view_file) ?>
 		</div>
 	</main>
 
