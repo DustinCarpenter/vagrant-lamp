@@ -2,8 +2,8 @@
 
 apache_config_file="/etc/apache2/envvars"
 apache_vhost_file="/etc/apache2/sites-available/vagrant_vhost.conf"
-php_config_file="/etc/php5/apache2/php.ini"
-xdebug_config_file="/etc/php5/mods-available/xdebug.ini"
+php_config_file="/etc/php7.2/apache2/php.ini"
+xdebug_config_file="/etc/php7.2/mods-available/xdebug.ini"
 mysql_config_file="/etc/mysql/my.cnf"
 default_apache_index="/var/www/html/index.html"
 
@@ -38,6 +38,10 @@ update_go() {
 	# Update the server
 	apt-get update
 	apt-get -y upgrade
+
+	apt-get install software-properties-common
+	add-apt-repository ppa:ondrej/php
+	apt-get update
 }
 
 network_go() {
@@ -84,7 +88,8 @@ EOF
 }
 
 php_go() {
-	apt-get -y install php5 php5-curl php5-mysql php5-sqlite php5-xdebug
+	apt-get -y install php7.2 php7.2-curl php7.2-mysql php7.2-sqlite php7.2-xdebug
+	apt-get -y install zip unzip php7.2-zip
 
 	sed -i "s/display_startup_errors = Off/display_startup_errors = On/g" ${php_config_file}
 	sed -i "s/display_errors = Off/display_errors = On/g" ${php_config_file}

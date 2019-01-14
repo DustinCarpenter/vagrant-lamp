@@ -18,7 +18,7 @@ Inspired by, and derived from: <https://github.com/mattandersen/vagrant-lamp>
 
 * Ubuntu 14 (ubuntu/trusty64)
 * Apache 2
-* PHP 5.5.x
+* PHP 7.2.x
 * MySQL 5.5.x
 * Node.js 10.x.x
 * NPM
